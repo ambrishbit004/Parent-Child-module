@@ -1,12 +1,11 @@
 name: Terraform Azure Deployment
 
 on:
-  push:
-    branches:
-       - feature/*
-       - feature/**
-
   pull_request:
+    branches:
+      - main
+
+  push:
     branches:
       - main
 
@@ -48,26 +47,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -out=tfplan
-
-      - name: Comment Plan on PR
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const output = `### Terraform Plan ✅
-
-            Terraform plan completed successfully.
-
-            **Branch:** \`${{ github.head_ref }}\`
-            **Commit:** \`${{ github.sha }}\`
-            `;
-
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: output
-            });
+        run: terraform plan
 
 
   terraform-apply:
