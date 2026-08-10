@@ -4,11 +4,7 @@ rgs = {
     location = "centralindia"
   }
 
-   rg2 = {
-    name     = "rg-nandu"
-    location = "centralindia"
-  }
-}
+   }
 
 vnets = {
   vnet1 = {
