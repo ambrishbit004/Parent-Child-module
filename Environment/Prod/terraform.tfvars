@@ -1,7 +1,7 @@
 rgs = {
   rg1 = {
     name     = "rg-ambrish"
-    location = "eastjapan"
+    location = "japaneast"
   }
   
 
@@ -10,7 +10,7 @@ rgs = {
 vnets = {
   vnet1 = {
     name                = "vnet-ambrish"
-    location            = "eastjapan"
+    location            = "japaneast"
     resource_group_name = "rg-ambrish"
     address_space       = ["10.20.0.0/16"]
   }
@@ -35,13 +35,13 @@ subnets = {
 pips = {
   pip1 = {
     name                = "frontend-pip"
-    location            = "eastjapan"
+    location            = "japaneast"
     resource_group_name = "rg-ambrish"
     allocation_method   = "Static"
   }
   pip2 = {
     name                = "backend-pip"
-    location            = "eastjapan"
+    location            = "japaneast"
     resource_group_name = "rg-ambrish"
     allocation_method   = "Static"
   }
@@ -50,7 +50,7 @@ pips = {
 vms = {
   vm1 = {
     nic_name             = "frontend-nic"
-    location             = "eastjapan"
+    location             = "japaneast"
     resource_group_name  = "rg-ambrish"
     subnet_name          = "frontend-subnet"
     virtual_network_name = "vnet-ambrish"
@@ -63,7 +63,7 @@ vms = {
 
   vm2 = {
     nic_name             = "backend-nic"
-    location             = "eastjapan"
+    location             = "japaneast"
     resource_group_name  = "rg-ambrish"
     subnet_name          = "backend-subnet"
     virtual_network_name = "vnet-ambrish"
