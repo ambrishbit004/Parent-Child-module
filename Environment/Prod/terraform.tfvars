@@ -56,7 +56,7 @@ vms = {
     virtual_network_name = "vnet-ambrish"
     public_ip_name       = "frontend-pip"
     vm-name              = "frontend-vm"
-    size                 = "Standard_D2s_v3"
+    size                 = "Standard_D2ads_v5"
     admin_username       = "adminuser"
     admin_password       = "Devopsadmin@123456"
   }
@@ -69,7 +69,7 @@ vms = {
     virtual_network_name = "vnet-ambrish"
     public_ip_name       = "backend-pip"
     vm-name              = "backend-vm"
-    size                 = "Standard_D2s_v3"
+    size                 = "Standard_D2ads_v5"
     admin_username       = "adminuser"
     admin_password       = "Devopsadmin@123456"
   }
