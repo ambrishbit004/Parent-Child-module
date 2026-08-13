@@ -3,6 +3,10 @@ rgs = {
     name     = "rg-ambrish"
     location = "japaneast"
   }
+  rg2 = {
+    name     = "rg-sumit"
+    location = "japaneast"
+  }
   
 
    }

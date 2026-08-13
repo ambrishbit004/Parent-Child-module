@@ -1,0 +1,29 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+
+  create-pr:
+    name: Create PR to Main
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "${{ github.ref_name }}" \
+            --title "Merge ${ { github.ref_name } } into main" \
+            --body "Automatically created Pull Request from ${{ github.ref_name }} to main." \
+            || echo "Pull Request already exists."
